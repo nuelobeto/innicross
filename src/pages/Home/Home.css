@@ -18,3 +18,9 @@
 .about_section {
   background-color: var(--grey);
 }
+
+@media (max-width: 480px) {
+  .hero_section {
+    max-height: 500px;
+  }
+}
