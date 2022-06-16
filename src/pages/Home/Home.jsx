@@ -15,6 +15,7 @@ export const Home = () => {
           <div className="hero_image">
             <img src={logo3} alt="" />
           </div>
+          <h1>Music. Talent. Business</h1>
         </section>
 
         <section className="about_section">About</section>

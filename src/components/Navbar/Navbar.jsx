@@ -1,7 +1,7 @@
 import "./Navbar.css";
 
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import logo1 from "../../images/Logo-Black-n-White.png";
 import { HiMenu } from "react-icons/hi";
@@ -20,11 +20,13 @@ export const Navbar = () => {
     window.addEventListener("resize", handleResize);
   }, [viewportWidth]);
 
+  const navigate = useNavigate();
+
   return (
     <>
       <nav>
         <div className="nav_content container">
-          <div className="main_logo">
+          <div className="main_logo" onClick={() => navigate("/")}>
             <img src={logo1} alt="" />
           </div>
 

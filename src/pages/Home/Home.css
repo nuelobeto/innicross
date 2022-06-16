@@ -1,11 +1,18 @@
 .hero_section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .hero_image {
   max-width: 700px;
   width: 80%;
+}
+
+.hero_section h1 {
+  font-size: 40px;
+  color: rgb(73, 72, 72);
 }
 
 .about_section {
