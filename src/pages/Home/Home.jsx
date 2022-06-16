@@ -3,8 +3,11 @@ import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
 import logo3 from "../../images/Logo-Black-n-Blue.png";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <header>
@@ -27,7 +30,7 @@ export const Home = () => {
             and talent for campaigns, projects and/or market penetration in
             Africa.
           </p>
-          <button>
+          <button onClick={() => navigate("/marketing")}>
             Marketing <MdOutlineArrowForwardIos />
           </button>
         </section>
