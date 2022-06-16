@@ -32,13 +32,13 @@ export const Navbar = () => {
             <>
               <ul className="nav_links">
                 <li>
-                  <NavLink to="/about">About</NavLink>
+                  <NavLink to="/">About</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/about">Marketing</NavLink>
+                  <NavLink to="/marketing">Marketing</NavLink>
                 </li>
                 <li>
-                  <NavLink to="/about">Contact</NavLink>
+                  <NavLink to="/contact">Contact</NavLink>
                 </li>
               </ul>
             </>
