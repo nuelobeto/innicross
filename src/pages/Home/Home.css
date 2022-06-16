@@ -19,8 +19,8 @@
   background-color: var(--grey);
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
+  height: 600px;
 }
 
 .about_section h2 {
@@ -58,6 +58,11 @@
   color: var(--white);
   background-color: var(--blue);
   margin: 4rem 0 0;
+  cursor: pointer;
+}
+
+.about_section button:hover {
+  background-color: var(--darkBlue);
 }
 
 .about_section button svg {
