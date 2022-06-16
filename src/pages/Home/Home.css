@@ -17,6 +17,51 @@
 
 .about_section {
   background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.about_section h2 {
+  font-size: clamp(30px, 4vw, 35px);
+  margin: 4rem 0 0;
+}
+
+.about_section h2::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+.about_section p {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  line-height: 2;
+  letter-spacing: 1px;
+  margin: 4rem 0 0;
+  font-size: 20px;
+}
+
+.about_section button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  background-color: var(--blue);
+  margin: 4rem 0 0;
+}
+
+.about_section button svg {
+  margin: 0 0 0 10px;
 }
 
 @media (max-width: 480px) {

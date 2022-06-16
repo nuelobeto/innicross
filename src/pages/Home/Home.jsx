@@ -2,6 +2,7 @@ import "./Home.css";
 import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
 import logo3 from "../../images/Logo-Black-n-Blue.png";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 
 export const Home = () => {
   return (
@@ -18,7 +19,18 @@ export const Home = () => {
           <h1>Music. Talent. Business</h1>
         </section>
 
-        <section className="about_section">About</section>
+        <section className="about_section">
+          <h2>About Us</h2>
+          <p>
+            Innicross Commerce and Trade Limited is an entity that provides
+            market and audience strategy for businesses who seek to use music
+            and talent for campaigns, projects and/or market penetration in
+            Africa.
+          </p>
+          <button>
+            Marketing <MdOutlineArrowForwardIos />
+          </button>
+        </section>
       </main>
 
       <Footer />
