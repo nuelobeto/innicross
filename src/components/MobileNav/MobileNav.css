@@ -1,0 +1,22 @@
+.mobile_nav {
+  background-color: var(--black);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: 3s all;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile_links {
+  margin: 75px 0 0 0;
+}
+
+.mobile_links li {
+  margin: 0 0 16px;
+}
+
+.mobile_links li a {
+  color: var(--white);
+}

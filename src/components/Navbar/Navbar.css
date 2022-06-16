@@ -1,0 +1,37 @@
+nav {
+  width: 100%;
+  background-color: var(--blue);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.nav_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+}
+
+.main_logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.nav_links {
+  display: flex;
+  align-items: center;
+}
+
+.nav_links li {
+  margin: 0 0 0 50px;
+}
+
+.nav_links a {
+  color: var(--white);
+}
+
+.menu {
+  color: var(--white);
+  font-size: 25px;
+}

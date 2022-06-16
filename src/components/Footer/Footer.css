@@ -1,0 +1,21 @@
+footer {
+  background-color: var(--black);
+}
+
+.footer_content {
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer_logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.footer_content p {
+  color: var(--white);
+  margin: 0 0 0 10px;
+  word-spacing: 10px;
+}
