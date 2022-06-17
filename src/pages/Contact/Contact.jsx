@@ -32,11 +32,11 @@ export const Contact = () => {
             <p>Talk to our support team</p>
             <AiFillPhone />
           </div>
-          <div className="social_media">
+          {/* <div className="social_media">
             <AiFillFacebook style={{ color: "#4267B2" }} />
             <BsTwitter style={{ color: " #00acee" }} />
             <img src={IgSvg} alt="" className="ig" />
-          </div>
+          </div> */}
         </section>
       </main>
 
