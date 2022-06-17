@@ -4,7 +4,7 @@ import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
 import { AiFillPhone, AiFillFacebook } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
-import IgSvg from "../../images/igSvg.svg";
+import IgSvg from "../../images/igSvg.jpg";
 
 export const Contact = () => {
   useEffect(() => {
