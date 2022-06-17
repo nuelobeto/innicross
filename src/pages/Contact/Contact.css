@@ -66,9 +66,8 @@
   margin: 0 30px;
 } */
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .contact {
     padding-top: 3rem;
-    height: auto;
   }
-} */
+}
