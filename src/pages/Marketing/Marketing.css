@@ -1,0 +1,73 @@
+.mrkt {
+  padding: 60px 0 0;
+}
+
+.marketing {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.marketing_content_box {
+  max-width: 1200px;
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marketing_image {
+  width: 40%;
+  min-width: 280px;
+  background-color: black;
+}
+
+.marketing_text {
+  width: 50%;
+  text-align: left;
+}
+
+.marketing_text h3 {
+  font-size: clamp(20px, 5vw, 30px);
+  margin: 0 0 1.5rem;
+}
+
+.marketing_text p {
+  font-size: clamp(18px, 3vw, 20px);
+  line-height: 1.5;
+}
+
+.two,
+.four {
+  background-color: var(--grey);
+}
+
+@media (max-width: 768px) {
+  .marketing {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .marketing_content_box {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .first,
+  .third {
+    flex-direction: column-reverse;
+  }
+
+  .marketing_image {
+    width: 80%;
+  }
+
+  .marketing_text {
+    width: 97%;
+    text-align: center;
+  }
+}
