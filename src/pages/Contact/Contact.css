@@ -57,9 +57,17 @@
 .social_media svg {
   margin: 0 30px;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .ig {
   width: 30px;
   margin: 0 30px;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding-top: 3rem;
+    height: auto;
+  }
 }

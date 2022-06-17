@@ -27,4 +27,5 @@
 .mobile_links li a {
   color: var(--white);
   font-size: 18px;
+  -webkit-tap-highlight-color: transparent;
 }
