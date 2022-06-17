@@ -1,0 +1,65 @@
+.contact {
+  height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact h2 {
+  font-size: clamp(30px, 4vw, 40px);
+  margin: 0 0 3rem;
+}
+
+.contact_text {
+  font-size: clamp(20px, 3vw, 25px);
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.email_us {
+  padding: 1rem 1.5rem;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--blue);
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 20px;
+  font-size: 20px;
+  margin: 4rem 0 3rem;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+}
+
+.email_us:hover {
+  background-color: var(--darkBlue);
+}
+
+.call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(18px, 3vw, 20px);
+}
+
+.call svg {
+  margin: 0 0 0 10px;
+  color: green;
+}
+
+.social_media {
+  margin: 4.5rem 0 3rem;
+  font-size: 30px;
+  display: flex;
+}
+
+.social_media svg {
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.ig {
+  width: 30px;
+  margin: 0 30px;
+}

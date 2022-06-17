@@ -1,4 +1,5 @@
 import "./Home.css";
+import { useEffect } from "react";
 import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
 import logo3 from "../../images/Logo-Black-n-Blue.png";
@@ -7,6 +8,10 @@ import { useNavigate } from "react-router-dom";
 
 export const Home = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

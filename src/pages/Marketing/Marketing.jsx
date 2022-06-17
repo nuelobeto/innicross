@@ -15,13 +15,17 @@ export const Marketing = () => {
     window.addEventListener("resize", handleResize);
   }, [viewportWidth]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <header>
         <Navbar />
       </header>
 
-      <main className="mrkt">
+      <main style={{ padding: "60px 0 0" }}>
         <section className="marketing one">
           <div className="marketing_content_box first">
             <div
