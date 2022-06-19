@@ -4,6 +4,30 @@ import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
 import img from "../../images/images.png";
 
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const textLeftVariants = {
+  visible: { x: 0, transition: { duration: 0.5, delay: 1 } },
+  hidden: { x: "-100rem" },
+};
+const textRightVariants = {
+  visible: { x: 0, transition: { duration: 0.5, delay: 1 } },
+  hidden: { x: "100rem" },
+};
+// const h1Variants = {
+//   visible: { y: 0, transition: { duration: 0.5, delay: 1.5 } },
+//   hidden: { y: "10rem" },
+// };
+const titleVariants = {
+  visible: { y: 0, transition: { duration: 0.5, delay: 0.5 } },
+  hidden: { y: "-4rem" },
+};
+const imgVariants = {
+  visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
+  hidden: { scale: 0 },
+};
+
 export const Marketing = () => {
   const [viewportWidth, setviewPortWidth] = useState(window.innerWidth);
 
@@ -19,26 +43,48 @@ export const Marketing = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <>
       <header>
         <Navbar />
       </header>
 
-      <main style={{ padding: "60px 0 0" }}>
+      <motion.main ref={ref} style={{ padding: "60px 0 0" }}>
         <section className="marketing one">
           <div className="marketing_content_box first">
-            <div
+            <motion.div
+              initial="hidden"
+              animate={controls}
+              variants={imgVariants}
               className="marketing_image"
               style={{
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "2rem 0 0"}`,
               }}
             >
               <img src={img} alt="" />
-            </div>
+            </motion.div>
             <div className="marketing_text">
-              <h3>Marketing:</h3>
-              <p>
+              <motion.h3
+                initial="hidden"
+                animate={controls}
+                variants={titleVariants}
+              >
+                Marketing:
+              </motion.h3>
+              <motion.p
+                initial="hidden"
+                animate={controls}
+                variants={textRightVariants}
+              >
                 Marketing and sales is very different from promotion and
                 advertisement in the creative space just as every other
                 business. We deploy marketing and PR campaigns that drive real
@@ -47,7 +93,7 @@ export const Marketing = () => {
                 marketing campaigns via several platforms which targets both
                 local and international audience using several technology
                 platforms that identifies target audience.
-              </p>
+              </motion.p>
             </div>
           </div>
         </section>
@@ -59,8 +105,19 @@ export const Marketing = () => {
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "0 0 2rem"}`,
               }}
             >
-              <h3>Market Operations: </h3>
-              <p>
+              <motion.h3
+                ref={ref}
+                initial="hidden"
+                animate={controls}
+                variants={titleVariants}
+              >
+                Market Operations:{" "}
+              </motion.h3>
+              <motion.p
+                initial="hidden"
+                animate={controls}
+                variants={textLeftVariants}
+              >
                 Africa is a very unique continent with 54 markets. Each market
                 has its own unique culture which directs its creative space. We
                 provide services that enable music businesses and/or businesses
@@ -70,26 +127,38 @@ export const Marketing = () => {
                 staffing and recruiting, music licensing and copyright
                 administration, royalties administration, Talent partnership and
                 development, and campaign management.
-              </p>
+              </motion.p>
             </div>
-            <div className="marketing_image">
+            <motion.div
+              initial="hidden"
+              animate={controls}
+              variants={imgVariants}
+              className="marketing_image"
+            >
               <img src={img} alt="" />
-            </div>
+            </motion.div>
           </div>
         </section>
         <section className="marketing three">
           <div className="marketing_content_box third">
-            <div
+            <motion.div
+              initial="hidden"
+              animate={controls}
+              variants={imgVariants}
               className="marketing_image"
               style={{
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "2rem 0 0"}`,
               }}
             >
               <img src={img} alt="" />
-            </div>
+            </motion.div>
             <div className="marketing_text">
-              <h3>Revenue Stream Development:</h3>
-              <p>
+              <motion.h3>Revenue Stream Development:</motion.h3>
+              <motion.p
+                initial="hidden"
+                animate={controls}
+                variants={textRightVariants}
+              >
                 Intellectual Property can be monetized in several ways. We
                 believe that intellectual property monetization is an infinite
                 possibility. Understanding this puts us at the forefront of
@@ -98,7 +167,7 @@ export const Marketing = () => {
                 developers, lawyers, royalties accountant and other Intellectual
                 property professionals in delivering the goals commitment made
                 to our clients.
-              </p>
+              </motion.p>
             </div>
           </div>
         </section>
@@ -110,8 +179,18 @@ export const Marketing = () => {
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "0 0 2rem"}`,
               }}
             >
-              <h3>Investment Management: </h3>
-              <p>
+              <motion.h3
+                initial="hidden"
+                animate={controls}
+                variants={titleVariants}
+              >
+                Investment Management:{" "}
+              </motion.h3>
+              <motion.p
+                initial="hidden"
+                animate={controls}
+                variants={textLeftVariants}
+              >
                 Financing creative industries businesses in Africa can be
                 challenging. Our years of experience in Sub-Saharan Africa
                 powering creative businesses via partnership and funding has
@@ -120,14 +199,19 @@ export const Marketing = () => {
                 creative businesses and also provide services that help creative
                 businesses manage the funds raised in order to achieve the goals
                 promised to investors.
-              </p>
+              </motion.p>
             </div>
-            <div className="marketing_image">
+            <motion.div
+              className="marketing_image"
+              initial="hidden"
+              animate={controls}
+              variants={imgVariants}
+            >
               <img src={img} alt="" />
-            </div>
+            </motion.div>
           </div>
         </section>
-      </main>
+      </motion.main>
 
       <Footer />
     </>
