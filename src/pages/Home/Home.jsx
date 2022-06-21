@@ -9,29 +9,25 @@ import { useNavigate } from "react-router-dom";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const textVariants = {
-  visible: { x: 0, transition: { duration: 0.5, delay: 0.5 } },
-  hidden: { x: "-100rem" },
-};
 const h1Variants = {
-  visible: { y: 0, transition: { duration: 0.5, delay: 1.5 } },
-  hidden: { y: "10rem" },
-};
-const titleVariants = {
-  visible: { y: 0, transition: { duration: 0.5, delay: 0.1 } },
-  hidden: { y: "-4rem" },
+  visible: { x: 0, transition: { type: "string", duration: 0.5, delay: 0.5 } },
+  hidden: { x: "-100vw" },
 };
 const imgVariants = {
-  visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
+  visible: { scale: 1, transition: { duration: 0.5, delay: 0.2 } },
+  hidden: { scale: 0 },
+};
+const textVariants = {
+  visible: { x: 0, transition: { duration: 0.5, delay: 0.3 } },
+  hidden: { x: 1000 },
+};
+const buttonVariants = {
+  visible: { scale: 1, transition: { duration: 0.5, delay: 0.8 } },
   hidden: { scale: 0 },
 };
 
 export const Home = () => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const controls = useAnimation();
   const [ref, inView] = useInView();
@@ -47,9 +43,8 @@ export const Home = () => {
       <header>
         <Navbar />
       </header>
-
-      <main ref={ref} className="home">
-        <section className="hero_section">
+      <main className="home">
+        <section ref={ref} className="hero_section">
           <motion.div
             initial="hidden"
             animate={controls}
@@ -58,29 +53,39 @@ export const Home = () => {
           >
             <img src={logo3} alt="" />
           </motion.div>
-          <motion.h1 initial="hidden" animate={controls} variants={h1Variants}>
+          <motion.h1 variants={h1Variants} initial="hidden" animate={controls}>
             Music. Talent. Business
           </motion.h1>
         </section>
 
-        <motion.section className="about_section">
+        <section className="about_section">
           <motion.h2
+            variants={imgVariants}
             initial="hidden"
-            animate={controls}
-            variants={titleVariants}
+            whileInView="visible"
           >
             About Us
           </motion.h2>
-          <motion.p initial="hidden" animate={controls} variants={textVariants}>
+          <motion.p
+            variants={imgVariants}
+            initial="hidden"
+            whileInView="visible"
+          >
             Innicross Commerce and Trade Limited is an entity that provides
             market and audience strategy for businesses who seek to use music
             and talent for campaigns, projects and/or market penetration in
             Africa.
           </motion.p>
-          <button onClick={() => navigate("/marketing")}>
+
+          <motion.button
+            onClick={() => navigate("/marketing")}
+            variants={buttonVariants}
+            initial="hidden"
+            whileInView="visible"
+          >
             Marketing <MdOutlineArrowForwardIos />
-          </button>
-        </motion.section>
+          </motion.button>
+        </section>
       </main>
 
       <Footer />

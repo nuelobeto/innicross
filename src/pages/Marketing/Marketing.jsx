@@ -4,24 +4,20 @@ import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
 import img from "../../images/images.png";
 
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
+// import { useInView } from "react-intersection-observer";
 
 const textLeftVariants = {
-  visible: { x: 0, transition: { duration: 0.5, delay: 1 } },
-  hidden: { x: "-100rem" },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.5 } },
+  hidden: { x: -200, opacity: 0 },
 };
 const textRightVariants = {
-  visible: { x: 0, transition: { duration: 0.5, delay: 1 } },
-  hidden: { x: "100rem" },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.5 } },
+  hidden: { x: 200, opacity: 0 },
 };
-// const h1Variants = {
-//   visible: { y: 0, transition: { duration: 0.5, delay: 1.5 } },
-//   hidden: { y: "10rem" },
-// };
 const titleVariants = {
-  visible: { y: 0, transition: { duration: 0.5, delay: 0.5 } },
-  hidden: { y: "-4rem" },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.3 } },
+  hidden: { y: -200, opacity: 0 },
 };
 const imgVariants = {
   visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
@@ -43,14 +39,14 @@ export const Marketing = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView();
+  // const controls = useAnimation();
+  // const [ref, inView] = useInView();
 
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     controls.start("visible");
+  //   }
+  // }, [controls, inView]);
 
   return (
     <>
@@ -58,12 +54,12 @@ export const Marketing = () => {
         <Navbar />
       </header>
 
-      <motion.main ref={ref} style={{ padding: "60px 0 0" }}>
+      <main style={{ padding: "60px 0 0" }}>
         <section className="marketing one">
           <div className="marketing_content_box first">
             <motion.div
               initial="hidden"
-              animate={controls}
+              whileInView="visible"
               variants={imgVariants}
               className="marketing_image"
               style={{
@@ -75,14 +71,14 @@ export const Marketing = () => {
             <div className="marketing_text">
               <motion.h3
                 initial="hidden"
-                animate={controls}
+                whileInView="visible"
                 variants={titleVariants}
               >
                 Marketing:
               </motion.h3>
               <motion.p
                 initial="hidden"
-                animate={controls}
+                whileInView="visible"
                 variants={textRightVariants}
               >
                 Marketing and sales is very different from promotion and
@@ -98,7 +94,7 @@ export const Marketing = () => {
           </div>
         </section>
         <section className="marketing two">
-          <div className="marketing_content_box second">
+          <motion.div className="marketing_content_box second">
             <div
               className="marketing_text"
               style={{
@@ -106,16 +102,15 @@ export const Marketing = () => {
               }}
             >
               <motion.h3
-                ref={ref}
                 initial="hidden"
-                animate={controls}
+                whileInView="visible"
                 variants={titleVariants}
               >
                 Market Operations:{" "}
               </motion.h3>
               <motion.p
                 initial="hidden"
-                animate={controls}
+                whileInView="visible"
                 variants={textLeftVariants}
               >
                 Africa is a very unique continent with 54 markets. Each market
@@ -131,19 +126,19 @@ export const Marketing = () => {
             </div>
             <motion.div
               initial="hidden"
-              animate={controls}
+              whileInView="visible"
               variants={imgVariants}
               className="marketing_image"
             >
               <img src={img} alt="" />
             </motion.div>
-          </div>
+          </motion.div>
         </section>
         <section className="marketing three">
           <div className="marketing_content_box third">
             <motion.div
               initial="hidden"
-              animate={controls}
+              whileInView="visible"
               variants={imgVariants}
               className="marketing_image"
               style={{
@@ -156,7 +151,7 @@ export const Marketing = () => {
               <motion.h3>Revenue Stream Development:</motion.h3>
               <motion.p
                 initial="hidden"
-                animate={controls}
+                whileInView="visible"
                 variants={textRightVariants}
               >
                 Intellectual Property can be monetized in several ways. We
@@ -181,14 +176,14 @@ export const Marketing = () => {
             >
               <motion.h3
                 initial="hidden"
-                animate={controls}
+                whileInView="visible"
                 variants={titleVariants}
               >
                 Investment Management:{" "}
               </motion.h3>
               <motion.p
                 initial="hidden"
-                animate={controls}
+                whileInView="visible"
                 variants={textLeftVariants}
               >
                 Financing creative industries businesses in Africa can be
@@ -204,14 +199,14 @@ export const Marketing = () => {
             <motion.div
               className="marketing_image"
               initial="hidden"
-              animate={controls}
+              whileInView="visible"
               variants={imgVariants}
             >
               <img src={img} alt="" />
             </motion.div>
           </div>
         </section>
-      </motion.main>
+      </main>
 
       <Footer />
     </>
