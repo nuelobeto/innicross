@@ -5,7 +5,7 @@ import { Footer } from "./../../components/Footer/Footer";
 import { AiFillPhone, AiFillFacebook } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { BsTwitter } from "react-icons/bs";
-import IgSvg from "../../images/igSvg.jpg";
+// import IgSvg from "../../images/igSvg.jpg";
 
 const textLeftVariants = {
   visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.5 } },
@@ -35,7 +35,7 @@ export const Contact = () => {
         <Navbar />
       </header>
 
-      <main style={{ padding: "60px 0 0" }}>
+      <main>
         <section className="contact">
           <motion.h2
           // initial="hidden"

@@ -54,7 +54,7 @@ export const Home = () => {
             <img src={logo3} alt="" />
           </motion.div>
           <motion.h1 variants={h1Variants} initial="hidden" animate={controls}>
-            Music. Talent. Business
+            Music. Talent. Business.
           </motion.h1>
         </section>
 
