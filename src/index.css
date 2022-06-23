@@ -10,10 +10,12 @@
   --black: #000;
   --white: #fff;
   --darkBlue: #0075c9;
+  --darkGrey: #494848;
 }
 
 body {
   max-width: 100vw;
+  font-family: "Outfit", sans-serif;
 }
 
 img {

@@ -29,6 +29,7 @@ nav {
 
 .nav_links a {
   color: var(--white);
+  font-size: 18px;
 }
 
 .menu {

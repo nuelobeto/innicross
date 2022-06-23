@@ -2,7 +2,10 @@ import "./Marketing.css";
 import { useState, useEffect } from "react";
 import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
-import img from "../../images/images.png";
+import marketingImg from "../../images/marketingImg.jpeg";
+import marketingOpImg from "../../images/marketOpImg.jpeg";
+import revenueImg from "../../images/revenueImg.jpg";
+import investmentMgtImg from "../../images/investmentMgtImg.webp";
 
 export const Marketing = () => {
   const [viewportWidth, setviewPortWidth] = useState(window.innerWidth);
@@ -34,7 +37,7 @@ export const Marketing = () => {
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "2rem 0 0"}`,
               }}
             >
-              <img src={img} alt="" />
+              <img src={marketingImg} alt="" />
             </div>
             <div className="marketing_text">
               <h3>Marketing:</h3>
@@ -73,7 +76,7 @@ export const Marketing = () => {
               </p>
             </div>
             <div className="marketing_image">
-              <img src={img} alt="" />
+              <img src={marketingOpImg} alt="" />
             </div>
           </div>
         </section>
@@ -85,7 +88,7 @@ export const Marketing = () => {
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "2rem 0 0"}`,
               }}
             >
-              <img src={img} alt="" />
+              <img src={revenueImg} alt="" />
             </div>
             <div className="marketing_text">
               <h3>Revenue Stream Development:</h3>
@@ -123,7 +126,7 @@ export const Marketing = () => {
               </p>
             </div>
             <div className="marketing_image">
-              <img src={img} alt="" />
+              <img src={investmentMgtImg} alt="" />
             </div>
           </div>
         </section>
