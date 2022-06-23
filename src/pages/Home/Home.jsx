@@ -63,6 +63,7 @@ export const Home = () => {
             variants={imgVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
           >
             About Us
           </motion.h2>
@@ -70,6 +71,7 @@ export const Home = () => {
             variants={imgVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
           >
             Innicross Commerce and Trade Limited is an entity that provides
             market and audience strategy for businesses who seek to use music
@@ -82,6 +84,7 @@ export const Home = () => {
             variants={buttonVariants}
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
           >
             Marketing <MdOutlineArrowForwardIos />
           </motion.button>
