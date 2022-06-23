@@ -2,7 +2,10 @@ import "./Marketing.css";
 import { useState, useEffect } from "react";
 import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
-import img from "../../images/images.png";
+import img1 from "../../images/img1.jpeg";
+import img2 from "../../images/img2.jpeg";
+import img3 from "../../images/img3.jpg";
+import img4 from "../../images/img4.jpg";
 
 export const Marketing = () => {
   const [viewportWidth, setviewPortWidth] = useState(window.innerWidth);
@@ -25,7 +28,7 @@ export const Marketing = () => {
         <Navbar />
       </header>
 
-      <main style={{ padding: "60px 0 0" }}>
+      <main style={{ padding: `${viewportWidth < 768 && "30px 0 0"}` }}>
         <section className="marketing one">
           <div className="marketing_content_box first">
             <div
@@ -34,7 +37,7 @@ export const Marketing = () => {
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "2rem 0 0"}`,
               }}
             >
-              <img src={img} alt="" />
+              <img src={img1} alt="" />
             </div>
             <div className="marketing_text">
               <h3>Marketing:</h3>
@@ -73,7 +76,7 @@ export const Marketing = () => {
               </p>
             </div>
             <div className="marketing_image">
-              <img src={img} alt="" />
+              <img src={img2} alt="" />
             </div>
           </div>
         </section>
@@ -85,7 +88,7 @@ export const Marketing = () => {
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "2rem 0 0"}`,
               }}
             >
-              <img src={img} alt="" />
+              <img src={img3} alt="" />
             </div>
             <div className="marketing_text">
               <h3>Revenue Stream Development:</h3>
@@ -123,7 +126,7 @@ export const Marketing = () => {
               </p>
             </div>
             <div className="marketing_image">
-              <img src={img} alt="" />
+              <img src={img4} alt="" />
             </div>
           </div>
         </section>

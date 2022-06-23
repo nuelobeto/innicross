@@ -4,7 +4,7 @@ import { Navbar } from "./../../components/Navbar/Navbar";
 import { Footer } from "./../../components/Footer/Footer";
 import { AiFillPhone, AiFillFacebook } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
-import IgSvg from "../../images/igSvg.jpg";
+// import IgSvg from "../../images/igSvg.jpg";
 
 export const Contact = () => {
   useEffect(() => {
@@ -17,7 +17,7 @@ export const Contact = () => {
         <Navbar />
       </header>
 
-      <main style={{ padding: "60px 0 0" }}>
+      <main>
         <section className="contact">
           <h2>How can we help?</h2>
           <p className="contact_text">
