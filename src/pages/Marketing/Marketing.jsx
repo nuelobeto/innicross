@@ -60,6 +60,7 @@ export const Marketing = () => {
             <motion.div
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               variants={imgVariants}
               className="marketing_image"
               style={{
@@ -70,15 +71,16 @@ export const Marketing = () => {
             </motion.div>
             <div className="marketing_text">
               <motion.h3
-                initial="hidden"
-                whileInView="visible"
-                variants={titleVariants}
+              // initial="hidden"
+              // whileInView="visible"
+              // variants={titleVariants}
               >
                 Marketing:
               </motion.h3>
               <motion.p
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 variants={textRightVariants}
               >
                 Marketing and sales is very different from promotion and
@@ -104,6 +106,7 @@ export const Marketing = () => {
               <motion.h3
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 variants={titleVariants}
               >
                 Market Operations:{" "}
@@ -111,6 +114,7 @@ export const Marketing = () => {
               <motion.p
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 variants={textLeftVariants}
               >
                 Africa is a very unique continent with 54 markets. Each market
@@ -128,6 +132,7 @@ export const Marketing = () => {
               initial="hidden"
               whileInView="visible"
               variants={imgVariants}
+              viewport={{ once: true }}
               className="marketing_image"
             >
               <img src={img} alt="" />
@@ -140,6 +145,7 @@ export const Marketing = () => {
               initial="hidden"
               whileInView="visible"
               variants={imgVariants}
+              viewport={{ once: true }}
               className="marketing_image"
               style={{
                 margin: `${viewportWidth > 768 ? "0 50px 0 0" : "2rem 0 0"}`,
@@ -152,6 +158,7 @@ export const Marketing = () => {
               <motion.p
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 variants={textRightVariants}
               >
                 Intellectual Property can be monetized in several ways. We
@@ -177,6 +184,7 @@ export const Marketing = () => {
               <motion.h3
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 variants={titleVariants}
               >
                 Investment Management:{" "}
@@ -184,6 +192,7 @@ export const Marketing = () => {
               <motion.p
                 initial="hidden"
                 whileInView="visible"
+                viewport={{ once: true }}
                 variants={textLeftVariants}
               >
                 Financing creative industries businesses in Africa can be
@@ -200,6 +209,7 @@ export const Marketing = () => {
               className="marketing_image"
               initial="hidden"
               whileInView="visible"
+              viewport={{ once: true }}
               variants={imgVariants}
             >
               <img src={img} alt="" />

@@ -38,9 +38,9 @@ export const Contact = () => {
       <main style={{ padding: "60px 0 0" }}>
         <section className="contact">
           <motion.h2
-            initial="hidden"
-            whileInView="visible"
-            variants={titleVariants}
+          // initial="hidden"
+          // whileInView="visible"
+          // variants={titleVariants}
           >
             How can we help?
           </motion.h2>
