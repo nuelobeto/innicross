@@ -70,9 +70,9 @@ export const Marketing = () => {
             </motion.div>
             <div className="marketing_text">
               <motion.h3
-                initial="hidden"
-                whileInView="visible"
-                variants={titleVariants}
+              // initial="hidden"
+              // whileInView="visible"
+              // variants={titleVariants}
               >
                 Marketing:
               </motion.h3>
