@@ -38,6 +38,10 @@ export const Marketing = () => {
     window.addEventListener("resize", handleResize);
   }, [viewportWidth]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <header>
