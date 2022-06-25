@@ -11,16 +11,16 @@ import { motion } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 
 const textLeftVariants = {
-  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.5 } },
-  hidden: { x: -200, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.8, delay: 0.8 } },
+  hidden: { x: -25, opacity: 0 },
 };
 const textRightVariants = {
-  visible: { x: 0, opacity: 1, transition: { duration: 0.5, delay: 0.5 } },
-  hidden: { x: 200, opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 0.8, delay: 0.8 } },
+  hidden: { x: 25, opacity: 0 },
 };
 const titleVariants = {
-  visible: { y: 0, opacity: 1, transition: { duration: 0.5, delay: 0.3 } },
-  hidden: { y: -200, opacity: 0 },
+  visible: { y: 0, opacity: 1, transition: { duration: 0.8, delay: 0.3 } },
+  hidden: { y: -25, opacity: 0 },
 };
 const imgVariants = {
   visible: { scale: 1, transition: { duration: 0.5, delay: 1 } },
@@ -37,19 +37,6 @@ export const Marketing = () => {
 
     window.addEventListener("resize", handleResize);
   }, [viewportWidth]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  // const controls = useAnimation();
-  // const [ref, inView] = useInView();
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible");
-  //   }
-  // }, [controls, inView]);
 
   return (
     <>
@@ -74,9 +61,10 @@ export const Marketing = () => {
             </motion.div>
             <div className="marketing_text">
               <motion.h3
-              // initial="hidden"
-              // whileInView="visible"
-              // variants={titleVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={titleVariants}
               >
                 Marketing:
               </motion.h3>
