@@ -73,10 +73,9 @@ export const Home = () => {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            Innicross Commerce and Trade Limited is an entity that provides
-            market and audience strategy for businesses who seek to use music
-            and talent for campaigns, projects and/or market penetration in
-            Africa.
+            Innicross is a Limited Liability entity that provides market and
+            audience strategy for businesses who seek to use music and talent
+            for campaigns, projects and/or market penetration in Africa.
           </motion.p>
 
           <motion.button
